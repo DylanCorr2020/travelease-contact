@@ -17,10 +17,10 @@ resource "aws_dynamodb_table" "travel-ease-database" {
 
 resource "aws_iam_role" "travelease_role_lambda" {
 
-    name = "travelease_role_lambda"
+  name = "travelease_role_lambda"
 
-    assume_role_policy = jsonencode({
-      Version = "2012-10-17"
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17"
     Statement = [{
       Action = "sts:AssumeRole"
       Effect = "Allow"
@@ -28,10 +28,11 @@ resource "aws_iam_role" "travelease_role_lambda" {
         Service = "lambda.amazonaws.com"
       }
     }]
-    })
-  
+  })
+
 }
 
+// Create custom policy for Lambda 
 resource "aws_iam_role_policy" "my_policy" {
   name = "my_custom_policy"
   role = aws_iam_role.travelease_role_lambda.name
@@ -40,18 +41,29 @@ resource "aws_iam_role_policy" "my_policy" {
     Version = "2012-10-17"
     Statement = [{
       Action = [
-         "dynamodb:PutItem",
-         "ses:SendEmail",
-				 "ses:SendRawEmail",
-         "logs:CreateLogGroup",
-         "logs:CreateLogStream",
-         "logs:PutLogEvents",
+        "dynamodb:PutItem",
+        "ses:SendEmail",
+        "ses:SendRawEmail",
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
 
       ]
       Effect   = "Allow"
       Resource = "*"
     }]
   })
+}
+
+
+// Create Lambda Function 
+resource "aws_lambda_function" "travel_ease_lambda" {
+
+  function_name = "travel_ease_lambda"
+  handler       = "lambda_function.lambda_handler"
+  runtime       = "python3.12"
+  role          = aws_iam_role.travelease_role_lambda.arn
+  filename      = "lambda.zip"
 }
 
 
