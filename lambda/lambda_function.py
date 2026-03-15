@@ -23,7 +23,7 @@ import re
 dynamodb = boto3.resource('dynamodb')
 
 # Reference the DynamoDB table
-table = dynamodb.Table('Travel_Ease_Database')
+table = dynamodb.Table('Travel-Ease-Database')
 
 # Create SES email client
 ses = boto3.client('ses', region_name='eu-west-1')
@@ -137,6 +137,7 @@ def save_to_dynamodb(data):
             # User data from form
             "first_name": data.get("first_name"),
             "email": data.get("email"),
+            "message" : data.get("message"),
 
             # Record creation timestamp
             "createdAt": datetime.utcnow().isoformat()

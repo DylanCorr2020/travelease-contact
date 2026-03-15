@@ -9,6 +9,7 @@ form.addEventListener("submit", async function (event) {
   //Get input values
   const first_name = document.getElementById("first_name").value;
   const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
 
   //Send data to API Gateway
   const response = await fetch(
@@ -22,6 +23,7 @@ form.addEventListener("submit", async function (event) {
       body: JSON.stringify({
         first_name: first_name,
         email: email,
+        message: message,
       }),
     },
   );

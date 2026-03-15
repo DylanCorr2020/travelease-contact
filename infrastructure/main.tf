@@ -61,10 +61,16 @@ resource "aws_lambda_function" "travel_ease_lambda" {
 
   function_name = "travel_ease_lambda"
   handler       = "lambda_function.lambda_handler"
-  runtime       = "python3.12"
+  runtime       = "python3.14"
   role          = aws_iam_role.travelease_role_lambda.arn
   filename      = "lambda.zip"
+
+   #Terraform to detect changes when the zip updates
+  source_code_hash = filebase64sha256("lambda.zip")
 }
+
+
+
 
 
 
