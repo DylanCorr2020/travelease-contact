@@ -13,7 +13,7 @@ form.addEventListener("submit", async function (event) {
 
   //Send data to API Gateway
   const response = await fetch(
-    "https://c5lp02doge.execute-api.eu-west-1.amazonaws.com/submit",
+    "https://itfr02no2j.execute-api.eu-west-1.amazonaws.com/travelease_api_gateway_stage/submit",
     {
       method: "POST",
       headers: {

@@ -76,6 +76,12 @@ resource "aws_lambda_function" "travel_ease_lambda" {
 resource "aws_apigatewayv2_api" "travelease_api_gateway" {
   name          = "travelease_api_gateway"
   protocol_type = "HTTP"
+
+  cors_configuration {
+    allow_origins = ["*"]
+    allow_headers = ["content-type"]
+    allow_methods = ["POST","OPTIONS","GET"]
+  }
 }
 
 #Sets up application stages for the API Gateway - such as "Test", "Staging", and "Production". The example configuration defines a single stage, with access logging enabled
@@ -83,6 +89,7 @@ resource "aws_apigatewayv2_stage" "lambda" {
 
   api_id = aws_apigatewayv2_api.travelease_api_gateway.id
   name   = "travelease_api_gateway_stage"
+  auto_deploy = true
 }
 
 
@@ -119,6 +126,10 @@ output "travelease_api_url" {
   description = "URL of the TravelEase API Gateway"
   value       = "${aws_apigatewayv2_api.travelease_api_gateway.api_endpoint}/${aws_apigatewayv2_stage.lambda.name}"
 }
+
+
+
+
 
 
 

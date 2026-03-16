@@ -154,6 +154,7 @@ def send_email(data):
 
     first_name = data.get("first_name")
     email = data.get("email")
+    message = data.get("message")
 
     # Dynamic email message
     user_message = f"""
@@ -204,6 +205,7 @@ New contact form submission
 
 Name: {first_name}
 Email: {email}
+Message: {message}
 
 Please follow up with this customer.
 """
