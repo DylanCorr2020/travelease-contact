@@ -10,7 +10,7 @@ A serverless contact management system built with AWS and Terraform to replace u
 ## 📖 Learn More
 
 For a full breakdown of the architecture, challenges, and decisions, check out the Medium post:  
-👉 [Read the Case Study](YOUR_MEDIUM_LINK)
+👉 [Read the Case Study](https://medium.com/p/0b06a13d5551?postPublishedType=initial)
 
 🎥 Watch the walkthrough:  
 👉 [Video Demo](YOUR_VIDEO_LINK)
