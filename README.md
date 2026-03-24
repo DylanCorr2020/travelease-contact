@@ -1,20 +1,22 @@
 # Travelease Contact System
 
-A serverless contact management system built to replace unreliable `mailto` links with a scalable, API-driven solution.
+A serverless contact management system built with AWS and Terraform to replace unreliable `mailto` links with a scalable, production-ready solution.
+
+[📖 Read the Full Case Study](https://medium.com/) • [🎥 Watch the Demo](https://)
 
 ---
 
-## Tech Stack
+## 🚀 Tech Stack
 
-- Frontend: HTML, CSS, JavaScript  
-- Backend: AWS Lambda, API Gateway  
-- Database: DynamoDB  
-- Email: Amazon SES  
-- Infrastructure: Terraform  
+- **Frontend:** HTML, CSS, JavaScript  
+- **Backend:** AWS Lambda, API Gateway  
+- **Database:** DynamoDB  
+- **Email:** Amazon SES  
+- **Infrastructure:** Terraform  
 
 ---
 
-## Architecture
+## 🏗️ Architecture
 
 S3 (Frontend) → API Gateway → Lambda → DynamoDB  
                                       ↓  
@@ -22,9 +24,9 @@ S3 (Frontend) → API Gateway → Lambda → DynamoDB
 
 ---
 
-## Features
+## ✨ Features
 
-- Validated contact form  
+- Validated contact form (client + server-side)  
 - Serverless API handling  
 - Email notifications (user + business)  
 - Persistent data storage  
@@ -32,7 +34,7 @@ S3 (Frontend) → API Gateway → Lambda → DynamoDB
 
 ---
 
-## Setup
+## ⚙️ Setup
 
 ```bash
 terraform init
