@@ -1,6 +1,3 @@
-
-
-
 # Travelease Contact System
 
 A serverless contact management system built with AWS and Terraform to replace unreliable `mailto` links with a scalable, production-ready solution.
@@ -13,7 +10,7 @@ For a full breakdown of the architecture, challenges, and decisions, check out t
 👉 [Read the Case Study](https://medium.com/p/0b06a13d5551?postPublishedType=initial)
 
 🎥 Watch the walkthrough:  
-👉 [Video Demo](YOUR_VIDEO_LINK)
+👉 [Video Demo](https://www.loom.com/share/e622e5ba2dcf436ba210c0d8c3e42812)
 
 ---
 
