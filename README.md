@@ -45,8 +45,8 @@ For a full breakdown of the architecture, challenges, and decisions, check out t
 ├── lambda/ # Lambda functions (Python)
 ├── infrastructure/ # Terraform configuration
 │ ├── main.tf
-│ ├── variables.tf
-│ └── outputs.tf
+│ ├── backend.tf /# state locking
+│ └── lambda.zip
 └── README.md
 
 ```
