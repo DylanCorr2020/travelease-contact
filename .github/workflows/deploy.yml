@@ -18,7 +18,7 @@ jobs:
           python-version: '3.9'
 
       - name: Install dependencies
-        run: pip install pytest
+        run: pip install pytest boto3
 
       - name: Run tests
         run: pytest
