@@ -1,4 +1,4 @@
-# Building a Serverless Contact System for a Travel App (AWS Lambda, SES, DynamoDB)
+# ✈️ Building a Serverless Contact System for a Travel App (AWS Lambda, SES, DynamoDB)
 
 A serverless contact management system built with AWS and Terraform to replace unreliable `mailto` links with a scalable, production-ready solution.
 
