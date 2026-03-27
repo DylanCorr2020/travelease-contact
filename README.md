@@ -51,6 +51,12 @@ For a full breakdown of the architecture, challenges, and decisions, check out t
 
 ```
 
+## 🛠️ Testing & CI/CD
+
+This project includes unit tests written using pytest to validate core functionality such as input validation and request parsing.
+
+Tests are automatically executed using GitHub Actions on each push, ensuring code reliability and preventing regressions as part of a CI/CD pipeline.
+
 ### 1. Clone the repository
 
 ```bash
