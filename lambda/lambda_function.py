@@ -20,7 +20,7 @@ import re
 # -----------------------------
 
 # Create DynamoDB service resource
-dynamodb = boto3.resource('dynamodb')
+dynamodb = boto3.resource('dynamodb' , region_name='eu-west-1')
 
 # Reference the DynamoDB table
 table = dynamodb.Table('Travel-Ease-Database')
